@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "09ab4b0d-a3ef-4421-92de-8b79552fa7af",
+		"name": "Open AI test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "43899412",
+		"_collection_link": "https://ruben-3176818.postman.co/workspace/Ruben's-Workspace~6e6b79bc-c9be-4a71-8258-4509f8de5fbf/collection/43899412-09ab4b0d-a3ef-4421-92de-8b79552fa7af?action=share&source=collection_link&creator=43899412"
+	},
+	"item": [
+		{
+			"name": "Basic",
+			"item": [
+				{
+					"name": "Basic test with params",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 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"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/ai/videogames/info?videogame=hades&model=gemma3&temperature=0.6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ai",
+								"videogames",
+								"info"
+							],
+							"query": [
+								{
+									"key": "videogame",
+									"value": "hades"
+								},
+								{
+									"key": "model",
+									"value": "gemma3"
+								},
+								{
+									"key": "temperature",
+									"value": "0.6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic test",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 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"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/ai/ask?question=¿que es Ollama?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ai",
+								"ask"
+							],
+							"query": [
+								{
+									"key": "question",
+									"value": "¿que es Ollama?"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rag",
+			"item": [
+				{
+					"name": "Cars",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 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"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/ai/rag/ask?question=¿que vehículo le recomendarías a Rubén Hernández?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ai",
+								"rag",
+								"ask"
+							],
+							"query": [
+								{
+									"key": "question",
+									"value": "Hazme una comparativa de los coches con más potencia",
+									"disabled": true
+								},
+								{
+									"key": "question",
+									"value": "¿qué desarrollador tiene más años de experiencia?",
+									"disabled": true
+								},
+								{
+									"key": "question",
+									"value": "¿que vehículo le recomendarías a Rubén Hernández?"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

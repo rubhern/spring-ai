@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: demo
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      init:
+        pull-model-strategy: always
+        timeout: 60s
+        max-retries: 1
+      embedding:
+        model: nomic-embed-text
+    vectorstore:
+      chroma:
+        # Al dejar esta propiedad vacía o apuntar a un directorio temporal, funcionará en modo "embedded"
+        database-dir: ""
+        initialize-schema: true

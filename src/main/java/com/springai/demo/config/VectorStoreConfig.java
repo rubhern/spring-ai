@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.springai.demo.config;
 
 import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.context.annotation.Bean;

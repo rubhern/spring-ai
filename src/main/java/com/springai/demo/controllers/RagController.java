@@ -33,11 +33,10 @@ public class RagController {
     private final VectorStore vectorStore;
     private final OllamaChatModel chatModel;
     private final List<String> people = List.of(
-            "Rubén Hernández es un ingeniero de software con más de 10 años de experiencia en desarrollo web y móvil. Ha trabajado en proyectos de gran escala para empresas como Google y Amazon.",
-            "Alberto Fuentes es un diseñador gráfico especializado en branding y diseño de interfaces. Ha colaborado con startups y grandes marcas para crear identidades visuales impactantes.",
-            "Juan Peña es un experto en marketing digital con un enfoque en SEO y SEM. Ha ayudado a numerosas empresas a mejorar su presencia en línea y aumentar sus conversiones.",
-            "Lucía Martínez es una desarrolladora de videojuegos con experiencia en Unity y Unreal Engine. Ha trabajado en varios títulos indie y es apasionada por la narrativa interactiva.",
-            "Celia González es una ingeniera de datos con experiencia en análisis y visualización de datos. Ha trabajado en proyectos de inteligencia empresarial para empresas Fortune 500."
+            "Rubén Hernández es un hombre que vive en una ciudad grande. Viaja mucho a otras ciudades por trabajo.",
+            "Alberto Fuentes es un hombre de mediana edad con mucho dinero. Le gusta el lujo y todo lo que tenga que ver con estar a la moda",
+            "Lucía Martínez es una mujer a la que le encanta la aventura. Siempre que puede hace escapadas a los sitios más recónditos e inexplorados.",
+            "Celia González es una mujer muy preocupada por el medio ambiente. Siempre que puede intenta hacer algo por el planeta."
     );
 
     @PostConstruct
@@ -101,12 +100,12 @@ public class RagController {
                 Responde basándote únicamente en el contexto. Si no tienes suficiente información, indícalo.
                 """.formatted(String.join("\n\n", context), question);
 
-        String respuesta = chatModel.call(new Prompt(prompt,
+        String response = chatModel.call(new Prompt(prompt,
                 OllamaOptions.builder()
-                        .model("gemma3")
+                        .model("gemma3:4B")
                         .temperature(0.7)
                         .build()
         )).getResult().getOutput().getText();
-        return Map.of("response", respuesta);
+        return Map.of("response", response);
     }
 }

@@ -10,8 +10,3 @@ spring:
         max-retries: 1
       embedding:
         model: nomic-embed-text
-    vectorstore:
-      chroma:
-        # Al dejar esta propiedad vacía o apuntar a un directorio temporal, funcionará en modo "embedded"
-        database-dir: ""
-        initialize-schema: true

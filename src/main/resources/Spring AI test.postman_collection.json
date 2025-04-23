@@ -1,8 +1,8 @@
 {
 	"info": {
 		"_postman_id": "09ab4b0d-a3ef-4421-92de-8b79552fa7af",
-		"name": "Open AI test",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"name": "Spring AI test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "43899412",
 		"_collection_link": "https://ruben-3176818.postman.co/workspace/Ruben's-Workspace~6e6b79bc-c9be-4a71-8258-4509f8de5fbf/collection/43899412-09ab4b0d-a3ef-4421-92de-8b79552fa7af?action=share&source=collection_link&creator=43899412"
 	},
@@ -28,7 +28,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/ai/videogames/info?videogame=hades&model=gemma3&temperature=0.6",
+							"raw": "http://localhost:8080/ai/videogames/info?videogame=Hades&model=gemma3:1B&temperature=0.9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -42,15 +42,15 @@
 							"query": [
 								{
 									"key": "videogame",
-									"value": "hades"
+									"value": "Hades"
 								},
 								{
 									"key": "model",
-									"value": "gemma3"
+									"value": "gemma3:1B"
 								},
 								{
 									"key": "temperature",
-									"value": "0.6"
+									"value": "0.9"
 								}
 							]
 						}
@@ -115,7 +115,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/ai/rag/ask?question=¿que vehículo le recomendarías a Rubén Hernández?",
+							"raw": "http://localhost:8080/ai/rag/ask?question=¿que vehículo le recomendarías a Celia González?",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -129,17 +129,17 @@
 							"query": [
 								{
 									"key": "question",
-									"value": "Hazme una comparativa de los coches con más potencia",
+									"value": "Hazme una comparativa de los 2 coches con más potencia",
 									"disabled": true
 								},
 								{
 									"key": "question",
-									"value": "¿qué desarrollador tiene más años de experiencia?",
+									"value": "¿a qué persona le gustaría escalar una montaña?",
 									"disabled": true
 								},
 								{
 									"key": "question",
-									"value": "¿que vehículo le recomendarías a Rubén Hernández?"
+									"value": "¿que vehículo le recomendarías a Celia González?"
 								}
 							]
 						}
